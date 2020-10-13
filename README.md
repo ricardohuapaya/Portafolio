@@ -2,7 +2,8 @@
 A portafolio of al my projects:
 
 ## Data Analysis and Visualisation
-*R 
-  *Hello [Where a Chipoltel](google.com)
-*Python
+- Python:
+ - [UCR Salaries](https://github.com/ricardohuapaya/UCR-Salaries-/blob/master/README.md) 
+
+- R:
 
