@@ -5,7 +5,7 @@ library(tidyverse)
 library(sf)
 library(tidycensus) 
 library(tripack)
-library(ggvoronoi)
+library(htmlwidgets)
 
 #Load data
 chipotle <- read_csv("datasets/chipotle.csv")
@@ -33,6 +33,7 @@ chipotle_heatmap <-
 
 
 chipotle_heatmap
+
 
 #### Exploratory Analysis ####
 
@@ -87,11 +88,10 @@ chipotle_market_research <-
   chipotle_open %>% 
   filter(st %in% c("IA", "MN", "MT", "ND", "NE", "WY")) %>% 
   select(city, st, lat, lon) %>% 
-  mutate(status = "open") %>% 
-
+  mutate(status = "open")
+  
 # print the market research data
 chipotle_market_research
-
 
 pal <- colorFactor(palette = c("Blue", "Red"), domain = c("open", "proposed"))
 
@@ -105,3 +105,7 @@ sd_proposed_map <-
 
 sd_proposed_map
 
+#### Saving maps###
+saveWidget(widget = chipotle_heatmap, file = 'chipotle_heatmap.html', selfcontained = T)
+saveWidget(widget = sd_pop_map, file = 'sd_pop_map.html', selfcontained = T)
+saveWidget(widget = sd_proposed_map, file = 'sd_proposed_map.html', selfcontained = T)
