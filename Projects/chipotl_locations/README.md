@@ -7,7 +7,7 @@
 - [:arrow_forward: Exploratory.R ](https://github.com/ricardohuapaya/Portafolio/blob/main/Projects/chipotl_locations/exploratory_analysis.R)
 
 ## Objective
-Since this is a guided project the main objective is to understand each line of code and comprehend how will it work under future projects. Thanks to DataCamp we have access to our input file `chipotle.csv` which contains all data regarding open and close chipotle around the world, for this case we'll be focusing on the state of South Dakota.
+Since this is a guided project the main objective is to understand each line of ficode and comprehend how will it work under future projects. Thanks to DataCamp we have access to our input file `chipotle.csv` which contains all data regarding open and close chipotle around the world, for this case we'll be focusing on the state of South Dakota.
 
 ## Data Clean
 For this specific project there not much data cleaning to do, after all we are going to be focusing on the open chipotles, for this reason we are only going to filter this variables.
