@@ -21,4 +21,12 @@ chipotle_open <-
 
 Now that we have filtered the data to only open chipotles, we can create a heat-map in order to give us a glimpse on the possible solutions that come next. 
 
+![HeatMap](https://github.com/ricardohuapaya/Portafolio/blob/main/Projects/chipotl_locations/Images/heatmap.png)
+
 ## Data Vizualization
+
+The insight that the heat map gives us is that there are areas where there is a larger concentation chipotles and certain path with no preseance at all. As we look into our data we are going to see that the states without chipotles are: ``` "AK", "HI", "SD"```. As we said in the begining we focus only on South Dhakota. 
+
+As we want to open a new store it is important to understand how many potencial customer we are going to have. For this will be estimating the population per city in South Dakhota. 
+
+![SD](https://github.com/ricardohuapaya/Portafolio/blob/main/Projects/chipotl_locations/Images/SD%20Population.png)
