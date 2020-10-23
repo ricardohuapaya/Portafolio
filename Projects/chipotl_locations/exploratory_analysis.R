@@ -61,7 +61,7 @@ states_wo_chipotles
 
 #Create a south dakota population archive
 
-census_api_key("352fc39a0a06988dca1b8279f70672a37d683aff", overwrite  = TRUE)
+#census_api_key("******", overwrite  = TRUE)
 
 south_dakota_pop <- get_acs(geography = "county", 
                             variables = "B01003_001", 
