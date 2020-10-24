@@ -106,6 +106,30 @@ sd_proposed_map <-
 
 sd_proposed_map
 
+#### POLYGONS#### 
+# load the Voronoi polygon data 
+polys <- readRDS("datasets/voronoi_polygons.rds")
+
+voronoi_map <- 
+  polys %>%
+  leaflet() %>%
+  # Use the CartoDB provider tile
+  addProviderTiles("CartoDB") %>%
+  # Plot Voronoi polygons using addPolygons
+  addPolygons(fillColor = ~pal(status), weight = 0.5, color = "black") %>%
+  # Add proposed and open locations as another layer
+  addCircleMarkers(data = chipotle_market_research, label = ~city, color = ~pal(status))
+
+# Print the Voronoi map
+voronoi_map
+
+#### FINAL REMARKS ####
+
+# Where should the next Chipotle store be? 
+next_chipotle <- tibble(location = c("Rapid City, SD", "Sioux Falls, SD"),
+                        open_new_store = c(TRUE, FALSE))
+next_chipotle
+
 #### Saving maps###
 saveWidget(widget = chipotle_heatmap, file = 'chipotle_heatmap.html', selfcontained = T)
 saveWidget(widget = sd_pop_map, file = 'sd_pop_map.html', selfcontained = T)
