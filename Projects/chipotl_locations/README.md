@@ -9,7 +9,7 @@
 ## Objective
 Since this is a guided project the main objective is to understand each line of of code and comprehend how will it work under future projects. Thanks to DataCamp we have access to our input file `chipotle.csv` which contains all data regarding open and close chipotle around the world, for this case we'll be focusing on the state of South Dakota.
 
-## Data Clean
+## Data Cleaning
 For this specific project there not much data cleaning to do, after all we are going to be focusing on the open chipotles, for this reason we are only going to filter this variable.
 
 ```R
@@ -53,3 +53,10 @@ chipotle_market_research <-
 Now we can create a map with the dot as actually opened stores and the both circle representing the possible location and it's reach to 100 miles radius. 
 
 ![Market](https://github.com/ricardohuapaya/Portafolio/blob/main/Projects/chipotl_locations/Images/proposed%20map.png)
+
+Even tho we can have a direct conclusion on regards with the last map, a 100 miles radius is a bit arbitrary, to get a better understanding of the reach a new store can have lets a great a Thiessen Map. The main idea is to uncover: "How far would be it be to other points in the map?". In this case we have a```.rds``` file in the ```\datasets``` directory so we are going to plot with it, none the less we can use the ```dismo``` package to it also. 
+
+![Voronoi](https://github.com/ricardohuapaya/Portafolio/blob/main/Projects/chipotl_locations/Images/varanoi_polygon.png)
+
+## Final Remarks
+Thanks to insight in the Thissen map we can conclude that the next store should be open in Rapid City because it covers a larger area in the map.
